@@ -1,113 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nafisa Binary Trading | Premium Trading Community</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0f1a;
-      --card:#11162a;
-      --accent:#22c55e;
-      --accent2:#38bdf8;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:radial-gradient(circle at top,rgba(56,189,248,.15),transparent 40%),linear-gradient(180deg,#050814,#0b0f1a);color:var(--text);overflow-x:hidden;position:relative;}
-    a{text-decoration:none;color:inherit}
-    header{padding:60px 20px;text-align:center;position:relative;z-index:2}
-    header h1{font-size:42px;font-weight:700;letter-spacing:1px}
-    header p{margin-top:12px;color:var(--muted)}
-    .cta{margin-top:28px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-    .btn{padding:18px 36px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;cursor:pointer;display:inline-block}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#020617;box-shadow:0 6px 20px rgba(34,197,94,.3);}
-    .btn-outline{border:2px solid var(--accent);color:var(--accent)}
-    .btn-primary:hover,.btn-outline:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(34,197,94,.5)}
-    section{padding:60px 20px;max-width:1200px;margin:auto;position:relative;z-index:2}
-    .title{text-align:center;margin-bottom:40px}
-    .title h2{font-size:30px;font-weight:700}
-    .title p{color:var(--muted);margin-top:8px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-    .card{background:linear-gradient(180deg,#0f1430,#0b1025);border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.4);transition:.3s;position:relative;overflow:hidden;cursor:pointer}
-    .card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(34,197,94,.4)}
-    .card h3{margin-bottom:10px}
-    .card p{color:var(--muted);font-size:14px}
-    .card a{color:var(--accent2);font-weight:600;transition:.3s}
-    .card a:hover{color:#22c55e}
-    .schedule li{list-style:none;margin:12px 0;color:var(--text)}
-    footer{padding:30px 20px;text-align:center;color:var(--muted);border-top:1px solid #1f2937;position:relative;z-index:2}
-    .badge{display:inline-block;background:rgba(34,197,94,.15);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:13px;margin-bottom:14px}
-    .card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(34,197,94,0.25),transparent 70%);animation:vipGlow 4s infinite alternate;z-index:0;}
-    @keyframes vipGlow{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.05)}100%{transform:rotate(360deg) scale(1)}}
-    body::before{content:'';position:fixed;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(34,197,94,.08),transparent 60%);animation:moveBg 12s linear infinite;z-index:1;}
-    
-    /* VIP Section New Style */
-    .vip-title {
-      text-align:center;
-      margin-bottom:30px;
-    }
-    .vip-title h2 {
-      font-size:36px;
-      font-weight:800;
-      background: linear-gradient(90deg, #22c55e, #38bdf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-      margin-bottom:6px;
-    }
-    .vip-title p {
-      color:#9ca3af;
-      font-size:16px;
-    }
-    .vip-box {
-      background: linear-gradient(180deg, #0f1430, #0b1025);
-      border-radius:18px;
-      padding:30px 25px;
-      max-width:700px;
-      margin:auto;
-      box-shadow:0 20px 50px rgba(0,0,0,.4);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .vip-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 60px rgba(34,197,94,0.4);
-    }
-    .vip-box p, .vip-box li {
-      font-size:15px;
-      color:#e5e7eb;
-      margin:10px 0;
-    }
-    .vip-box a {
-      color:#38bdf8;
-      font-weight:600;
-      text-decoration:underline;
-      cursor:pointer;
-    }
-    .vip-box a:hover {
-      color:#22c55e;
-    }
-    .vip-box ul {
-      list-style:none;
-      padding-left:0;
-    }
-    .vip-box hr {
-      border:none;
-      border-top:2px solid #38bdf8;
-      margin:15px 0;
-    }
-    @media(max-width:600px){header h1{font-size:32px}.btn{font-size:16px;padding:16px 28px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nᴀғɪsᴀ Binary Trading | Premium Trading Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#22c55e;
+  --accent2:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#c0c0c0;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background: url('https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg') center/cover no-repeat fixed;
+  color: var(--text);
+  overflow-x:hidden;
+  position: relative;
+}
+
+/* overlay for readability */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.6);
+  z-index:0;
+}
+
+/* Animated overlay lights */
+.overlay-lights {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background: linear-gradient(120deg, rgba(34,197,94,0.1) 0%, rgba(56,189,248,0.1) 50%, rgba(34,197,94,0.1) 100%);
+  background-size: 200% 200%;
+  animation: moveLights 10s linear infinite;
+  z-index:1;
+}
+
+@keyframes moveLights {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* general styles */
+a{text-decoration:none;color:inherit;}
+header{
+  padding:60px 20px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+header h1{font-size:42px;font-weight:700;letter-spacing:1px;}
+header p{margin-top:12px;color:var(--muted);}
+.cta{margin-top:28px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.btn{padding:18px 36px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;cursor:pointer;display:inline-block;}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#020617;box-shadow:0 6px 20px rgba(34,197,94,.3);}
+.btn-outline{border:2px solid var(--accent);color:var(--accent);}
+.btn-primary:hover,.btn-outline:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(34,197,94,.5);}
+section{padding:60px 20px;max-width:1200px;margin:auto;position:relative;z-index:2;}
+.title{text-align:center;margin-bottom:40px;}
+.title h2{font-size:30px;font-weight:700;}
+.title p{color:var(--muted);margin-top:8px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.card{
+  background: rgba(15,20,48,0.85);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+  transition:.3s;
+  position:relative;
+  cursor:pointer;
+  z-index:2;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(34,197,94,.5);}
+.card h3{margin-bottom:10px;}
+.card p{color:var(--muted);font-size:14px;}
+.card a{color:var(--accent2);font-weight:600;transition:.3s;}
+.card a:hover{color:#22c55e;}
+
+/* VIP Section */
+.vip-title {text-align:center;margin-bottom:30px;}
+.vip-title h2 {
+  font-size:36px;
+  font-weight:800;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  margin-bottom:6px;
+}
+.vip-title p {color:#c0c0c0;font-size:16px;}
+
+.vip-box {
+  background: rgba(15,20,48,0.85);
+  border-radius:18px;
+  padding:30px 25px;
+  max-width:700px;
+  margin:auto;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.vip-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(34,197,94,0.5);
+}
+.vip-box p, .vip-box li {
+  font-size:15px;
+  color:#e5e7eb;
+  margin:10px 0;
+}
+.vip-box a {
+  color:#38bdf8;
+  font-weight:600;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.vip-box a:hover {color:#22c55e;}
+.vip-box ul {list-style:none;padding-left:0;}
+.vip-box hr {border:none;border-top:2px solid #38bdf8;margin:15px 0;}
+
+footer{
+  padding:30px 20px;text-align:center;color:var(--muted);border-top:1px solid #1f2937;position:relative;z-index:2;
+}
+
+@media(max-width:600px){header h1{font-size:32px}.btn{font-size:16px;padding:16px 28px}}
+</style>
 </head>
 <body>
 
+<div class="overlay-lights"></div>
+
 <header>
   <span class="badge">Premium Binary Trading Community</span>
-  <h1>Nafisa Binary Trading</h1>
+  <h1>Nᴀғɪsᴀ Binary Trading</h1>
   <p>Trusted • Professional • Result-Oriented Trading Community</p>
   <div class="cta">
-    <a class="btn btn-primary" href="https://t.me/+aYqNJEHd1nk5ZDY1" target="_blank" rel="noopener noreferrer">Join Now</a>
+    <a class="btn btn-primary" href="https://t.me/+aYqNJEHd1nk5ZDY1" target="_blank">Join Now</a>
     <a class="btn btn-outline" href="#vip">VIP Join Rules</a>
   </div>
 </header>
@@ -119,7 +151,7 @@
   </div>
   <div class="grid">
     <div class="card" onclick="window.open('https://t.me/+aYqNJEHd1nk5ZDY1','_blank')"><h3>📊 Signal Group</h3><p>Free trading signals & updates</p></div>
-    <div class="card" onclick="window.open('https://t.me/TradingSkillbd','_blank')"><h3>👾 Stage Video Group (Trading Skill)</h3><p>Trading skill & live explanations</p></div>
+    <div class="card" onclick="window.open('https://t.me/TradingSkillbd','_blank')"><h3>👾 Stage Video Group</h3><p>Trading skill & live explanations</p></div>
     <div class="card" onclick="window.open('https://t.me/+b7dQadHNU1RhNDRl','_blank')"><h3>💰 Money Management Group</h3><p>Capital protection & growth rules</p></div>
     <div class="card" onclick="window.open('https://t.me/+AD0IOSChdyFlYjJl','_blank')"><h3>🪙 Crypto Trading Group</h3><p>Crypto market analysis & signals</p></div>
   </div>
@@ -130,31 +162,18 @@
     <h2>🔐 VIP Join Rules & Signal Schedule</h2>
     <p>Professional & Transparent Process</p>
   </div>
-  
   <div class="vip-box">
     <p>💵 Minimum <b>$30 Deposit</b></p>
-
-    <p>🇧🇩 BD Users: 
-      <a href="https://broker-qx.pro/sign-up/?lid=1645988" target="_blank">Register Here</a>
-    </p>
-
-    <p>🌐 All Countries: 
-      <a href="https://broker-qx.pro/sign-up/?lid=1508486" target="_blank">Register Here</a>
-    </p>
-
-    <p>😀 Deposit করার পরে Trader ID পাঠান: 
-      <a href="https://t.me/NafisaTrader" target="_blank">@NafisaTrader</a>
-    </p>
-
+    <p>🇧🇩 BD Users: <a href="https://broker-qx.pro/sign-up/?lid=1645988" target="_blank">Register Here</a></p>
+    <p>🌐 All Countries: <a href="https://broker-qx.pro/sign-up/?lid=1508486" target="_blank">Register Here</a></p>
+    <p>😀 Deposit করার পরে Trader ID পাঠান: <a href="https://t.me/NafisaTrader" target="_blank">@NafisaTrader</a></p>
     <hr>
-
     <p>📣 VIP Signal Schedule:</p>
     <ul>
       <li>⏰ <a href="https://t.me/NafisaTrader" target="_blank">NafisaTrader</a>: সকাল ১১টা & রাত ৯টা</li>
       <li>⏰ <a href="https://t.me/TraderParvej" target="_blank">TraderParvej</a>: দুপুর ০২টা</li>
       <li>⏰ <a href="https://t.me/ShaunTrader" target="_blank">ShaunTrader</a>: Future Signal – যেকোনো সময়</li>
     </ul>
-
     <p>📈 প্রতিদিন ২–৩টি Future Signal List দেওয়া হয়</p>
   </div>
 </section>
@@ -165,20 +184,14 @@
     <p>Dedicated & Verified Support Team</p>
   </div>
   <div class="grid">
-    <div class="card" onclick="window.open('https://t.me/NafisaTrader','_blank')">
-      <h3>👑 Owner: @NafisaTrader</h3>
-    </div>
-    <div class="card" onclick="window.open('https://t.me/TraderParvej','_blank')">
-      <h3>😀 Senior Admin: @TraderParvej</h3>
-    </div>
-    <div class="card" onclick="window.open('https://t.me/ShaunTrader','_blank')">
-      <h3>🛠 Admin: @ShaunTrader</h3>
-    </div>
+    <div class="card" onclick="window.open('https://t.me/NafisaTrader','_blank')"><h3>👑 Owner: @NafisaTrader</h3></div>
+    <div class="card" onclick="window.open('https://t.me/TraderParvej','_blank')"><h3>😀 Senior Admin: @TraderParvej</h3></div>
+    <div class="card" onclick="window.open('https://t.me/ShaunTrader','_blank')"><h3>🛠 Admin: @ShaunTrader</h3></div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Nafisa Binary Trading • All Rights Reserved</p>
+  <p>© 2026 Nᴀғɪsᴀ Binary Trading • All Rights Reserved</p>
   <p>⚠️ Binary trading involves risk. Trade responsibly.</p>
 </footer>
 
