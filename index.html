@@ -30,21 +30,19 @@ html, body{
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
-             url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg");
-  background-size: auto 110%; /* Mobile optimized */
-  background-position:center center;
+  background:url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg") center center no-repeat;
+  background-size:cover; /* single background */
   animation:bgZoom 20s ease-in-out infinite alternate;
 }
 
 /* Background subtle zoom */
 @keyframes bgZoom{
-  0%{background-size:auto 105%;}
-  50%{background-size:auto 110%;}
-  100%{background-size:auto 105%;}
+  0%{background-size:100%;}
+  50%{background-size:103%;}
+  100%{background-size:100%;}
 }
 
-/* Card */
+/* Card container */
 .card{
   position:relative;
   z-index:2;
@@ -53,6 +51,9 @@ html, body{
   max-width:420px;
   background:transparent;
   border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 /* Live viewers */
@@ -72,10 +73,10 @@ html, body{
   font-weight:700;
 }
 
-/* Avatar image */
+/* Avatar */
 .avatar{
-  width:40vw;       /* Responsive width for mobile */
-  max-width:160px;  /* Limit max size */
+  width:40vw;
+  max-width:160px;
   height:auto;
   border-radius:50%;
   border:4px solid #22c55e;
@@ -90,22 +91,29 @@ html, body{
   100%{transform:scale(1);}
 }
 
+/* Headline */
 h1{
-  font-size:6vw; /* Responsive */
+  font-size:6vw;
   max-font-size:36px;
+  color:#fff;
   margin:10px 0 8px;
+  text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+  z-index:5;
 }
 
 p{
   font-size:4.5vw;
   max-font-size:18px;
   color:#e5e7eb;
+  text-shadow:1px 1px 6px rgba(0,0,0,0.4);
+  margin-bottom:20px;
 }
 
+/* Join button */
 .join{
-  margin-top:25px;
+  margin-top:15px;
   display:inline-block;
-  padding:4vw 10vw; /* Responsive padding */
+  padding:4vw 10vw;
   max-padding:16px 40px;
   background:linear-gradient(90deg,#22c55e,#38bdf8);
   color:#020617;
@@ -179,7 +187,7 @@ function joinEffect(btn){
   <div class="card">
     <img class="avatar" src="https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg">
 
-    <!-- Personal headline -->
+    <!-- Headline -->
     <h1>💚 Nafisa Trader</h1>
     <p>This is my personal group — everyone is welcome to join 📈</p>
 
