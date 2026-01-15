@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Join My Personal Group</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <style>
 *{
@@ -13,13 +13,10 @@
   font-family:'Poppins',sans-serif;
 }
 
-body{
-  height:100vh;
+html, body{
+  height:100%;
+  width:100%;
   background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
   overflow:hidden;
 }
 
@@ -27,25 +24,24 @@ body{
 .wrap{
   position:relative;
   width:100%;
-  height:100vh;
+  height:100%;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:
-    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
-    url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg");
-  background-size:cover;
-  background-position:center;
-  animation:bgZoom 20s ease-in-out infinite alternate; /* slower & subtle */
+  background:linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+             url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg");
+  background-size: auto 110%; /* Mobile optimized */
+  background-position:center center;
+  animation:bgZoom 20s ease-in-out infinite alternate;
 }
 
-/* Subtle Background zoom */
+/* Background subtle zoom */
 @keyframes bgZoom{
-  0%{background-size:100%;}
-  50%{background-size:103%;} /* subtle zoom */
-  100%{background-size:100%;}
+  0%{background-size:auto 105%;}
+  50%{background-size:auto 110%;}
+  100%{background-size:auto 105%;}
 }
 
 /* Card */
@@ -55,7 +51,7 @@ body{
   padding:20px;
   width:90%;
   max-width:420px;
-  background: transparent; /* clean, no dark block */
+  background:transparent;
   border-radius:18px;
 }
 
@@ -78,8 +74,9 @@ body{
 
 /* Avatar image */
 .avatar{
-  width:160px;
-  height:160px;
+  width:40vw;       /* Responsive width for mobile */
+  max-width:160px;  /* Limit max size */
+  height:auto;
   border-radius:50%;
   border:4px solid #22c55e;
   object-fit:cover;
@@ -94,23 +91,27 @@ body{
 }
 
 h1{
-  font-size:28px;
+  font-size:6vw; /* Responsive */
+  max-font-size:36px;
   margin:10px 0 8px;
 }
 
 p{
-  font-size:16px;
+  font-size:4.5vw;
+  max-font-size:18px;
   color:#e5e7eb;
 }
 
 .join{
   margin-top:25px;
   display:inline-block;
-  padding:16px 40px;
+  padding:4vw 10vw; /* Responsive padding */
+  max-padding:16px 40px;
   background:linear-gradient(90deg,#22c55e,#38bdf8);
   color:#020617;
   font-weight:800;
-  font-size:18px;
+  font-size:5vw;
+  max-font-size:18px;
   border-radius:50px;
   text-decoration:none;
   box-shadow:0 12px 35px rgba(34,197,94,.7);
@@ -133,8 +134,9 @@ p{
   100%{transform:translateX(0);}
 }
 
-/* Responsive adjustments for PC / tablet */
+/* Responsive PC adjustments */
 @media(min-width:768px){
+  .avatar{width:160px;height:160px;}
   h1{font-size:32px;}
   p{font-size:17px;}
   .join{font-size:20px;padding:18px 50px;}
