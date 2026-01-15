@@ -16,23 +16,24 @@
 html, body{
   height:100%;
   width:100%;
-  background:#000;
+  margin:0;
+  padding:0;
   overflow:hidden;
 }
 
-/* Container */
+/* Fullscreen wrapper */
 .wrap{
-  position:relative;
-  width:100%;
-  height:100%;
+  position:fixed;
+  inset:0; /* top:0; left:0; bottom:0; right:0 */
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
   background:url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg") center center no-repeat;
   background-size:cover;
   animation:bgZoom 25s ease-in-out infinite alternate;
+  z-index:1;
 }
 
 /* Background subtle zoom */
@@ -42,7 +43,7 @@ html, body{
   100%{background-size:100%;}
 }
 
-/* Card */
+/* Card container */
 .card{
   position:relative;
   z-index:2;
@@ -50,13 +51,12 @@ html, body{
   width:90%;
   max-width:420px;
   background:transparent;
-  border-radius:18px;
   display:flex;
   flex-direction:column;
   align-items:center;
 }
 
-/* Avatar floating effect */
+/* Avatar floating + pulse */
 .avatar{
   width:40vw;
   max-width:160px;
@@ -86,7 +86,7 @@ h1{
   color:#fff;
   margin:10px 0 8px;
   text-shadow:2px 2px 8px rgba(0,0,0,0.6);
-  z-index:5;
+  z-index:2;
 }
 
 p{
@@ -112,6 +112,7 @@ p{
   text-decoration:none;
   box-shadow:0 12px 35px rgba(34,197,94,.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.3s ease;
+  z-index:2;
 }
 .join:hover{
   transform:translateY(-3px);
