@@ -19,12 +19,13 @@ html, body{
   margin:0;
   padding:0;
   overflow:hidden;
+  background:#000;
 }
 
 /* Fullscreen wrapper */
 .wrap{
   position:fixed;
-  inset:0; /* top:0; left:0; bottom:0; right:0 */
+  inset:0;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -36,17 +37,38 @@ html, body{
   z-index:1;
 }
 
-/* Background subtle zoom */
+/* Subtle background zoom */
 @keyframes bgZoom{
   0%{background-size:100%;}
   50%{background-size:102%;}
   100%{background-size:100%;}
 }
 
+/* Particle overlay */
+.particles{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:2;
+  overflow:hidden;
+}
+.particle{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:rgba(255,255,255,0.3);
+  border-radius:50%;
+  animation:floatParticle linear infinite;
+}
+@keyframes floatParticle{
+  0%{transform:translateY(100vh) translateX(0);}
+  100%{transform:translateY(-10vh) translateX(20px);}
+}
+
 /* Card container */
 .card{
   position:relative;
-  z-index:2;
+  z-index:3;
   padding:20px;
   width:90%;
   max-width:420px;
@@ -86,7 +108,7 @@ h1{
   color:#fff;
   margin:10px 0 8px;
   text-shadow:2px 2px 8px rgba(0,0,0,0.6);
-  z-index:2;
+  z-index:3;
 }
 
 p{
@@ -112,7 +134,7 @@ p{
   text-decoration:none;
   box-shadow:0 12px 35px rgba(34,197,94,.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.3s ease;
-  z-index:2;
+  z-index:3;
 }
 .join:hover{
   transform:translateY(-3px);
@@ -154,6 +176,25 @@ function joinEffect(btn){
   }
   btn.classList.add("shake");
   setTimeout(()=>btn.classList.remove("shake"),250);
+}
+
+/* Generate particles */
+const particleCount = 30; // adjust for density
+window.onload = function(){
+  const container = document.createElement('div');
+  container.className = 'particles';
+  document.querySelector('.wrap').appendChild(container);
+
+  for(let i=0;i<particleCount;i++){
+    const p = document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'vw';
+    p.style.animationDuration=(5+Math.random()*5)+'s';
+    p.style.width=2+Math.random()*3+'px';
+    p.style.height=2+Math.random()*3+'px';
+    p.style.opacity=0.2+Math.random()*0.3;
+    container.appendChild(p);
+  }
 }
 </script>
 
