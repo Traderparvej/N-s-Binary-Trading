@@ -34,7 +34,7 @@ body{
   justify-content:center;
   text-align:center;
   background:
-    linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), /* fully transparent overlay */
+    linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
     url("https://i.postimg.cc/FKSw2Nxj/photo-2026-01-15-02-07-16.jpg");
   background-size:cover;
   background-position:center;
@@ -48,7 +48,7 @@ body{
   padding:20px;
   width:90%;
   max-width:420px;
-  background: transparent; /* fully transparent now */
+  background: transparent;
   border-radius:18px;
 }
 
@@ -59,7 +59,7 @@ body{
   border-radius:50%;
   border:4px solid #22c55e;
   object-fit:cover;
-  box-shadow:0 0 35px rgba(34,197,94,.7); /* optional glow around avatar */
+  box-shadow:0 0 35px rgba(34,197,94,.7);
   margin-bottom:20px;
 }
 
@@ -103,7 +103,7 @@ p{
   100%{transform:translateX(0);}
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media(min-width:768px){
   h1{font-size:32px;}
   p{font-size:17px;}
@@ -115,14 +115,12 @@ p{
   .join{font-size:22px;padding:20px 55px;}
 }
 
-/* Fix mobile double display issue */
 html, body {
   overflow-x: hidden;
 }
 </style>
 
 <script>
-/* Click effect */
 function joinEffect(btn){
   if(navigator.vibrate){
     navigator.vibrate(60);
@@ -149,6 +147,12 @@ function joinEffect(btn){
        onclick="joinEffect(this)">
       Join Telegram 💬
     </a>
+
+    <!-- Short Disclaimer -->
+    <p style="margin-top:14px;font-size:11.5px;color:#9ca3af;">
+      Educational use only. Trading involves risk.
+    </p>
+
   </div>
 </div>
 
